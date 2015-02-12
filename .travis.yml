@@ -1,0 +1,9 @@
+language: csharp
+solution: PosemetreCore.sln
+install:
+  - nuget restore PosemetreCore.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release PosemetreCore.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe nunit-console ./PosemetreCore/PosemetreCore-Tests.csproj
+  

@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using PosemetreCore.data;
+using NUnit.Framework;
 
 
 namespace PosemetreCore.services
 {
-    [TestClass]
+    [TestFixture]
     public class ServicePosemetreTest
     {
-        [TestMethod]
-        public void initialiserUnServicePosemetre() {
+        [Test]
+        public void initialiserUnServicePosemetre()
+        {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
 
-            Assert.IsNotNull(servicePosemetre);
+            Assert.That(servicePosemetre, Is.Not.Null);
         }
 
-        [TestMethod]
+        [Test]
         public void calculerOuvertureSunny16()
         {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
@@ -26,11 +27,11 @@ namespace PosemetreCore.services
 
             servicePosemetre.calculerOuverture(posemetre);
 
-            Assert.AreEqual(16, posemetre.getN());
+            Assert.That(posemetre.getN(), Is.EqualTo(16));
         }
 
 
-        [TestMethod]
+        [Test]
         public void calculerIsoSunny16()
         {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
@@ -38,10 +39,10 @@ namespace PosemetreCore.services
 
             servicePosemetre.calculerIso(posemetre);
 
-            Assert.AreEqual(100, posemetre.getS());
+            Assert.That(posemetre.getS(), Is.EqualTo(100));
         }
 
-        [TestMethod]
+        [Test]
         public void calculerTempsDePoseSunny16()
         {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
@@ -49,10 +50,10 @@ namespace PosemetreCore.services
   
             servicePosemetre.calculerTempsDePose(posemetre);
 
-            Assert.AreEqual(1.0 / 125.0, posemetre.getT());
+            Assert.That(posemetre.getT(), Is.EqualTo(1.0 / 125.0));
         }
 
-        [TestMethod]
+        [Test]
         public void calculerTempsDePoseEV1()
         {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
@@ -60,10 +61,10 @@ namespace PosemetreCore.services
 
             servicePosemetre.calculerTempsDePose(posemetre);
 
-            Assert.AreEqual(1, posemetre.getT());
+            Assert.That(posemetre.getT(), Is.EqualTo(1));
         }
 
-        [TestMethod]
+        [Test]
         public void calculerModeTempsDePose()
         {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
@@ -72,11 +73,11 @@ namespace PosemetreCore.services
 
             servicePosemetre.calculer(posemetre);
 
-            Assert.AreEqual(1.0 / 125.0, posemetre.getT());
+            Assert.That(posemetre.getT(), Is.EqualTo(1.0 / 125.0));
         }
 
 
-        [TestMethod]
+        [Test]
         public void calculerModeIso()
         {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
@@ -85,10 +86,10 @@ namespace PosemetreCore.services
 
             servicePosemetre.calculer(posemetre);
 
-            Assert.AreEqual(100, posemetre.getS());
+            Assert.That(posemetre.getS(), Is.EqualTo(100));
         }
 
-        [TestMethod]
+        [Test]
         public void calculerModeOuverture()
         {
             ServicePosemetre servicePosemetre = new ServicePosemetre();
@@ -97,7 +98,7 @@ namespace PosemetreCore.services
 
             servicePosemetre.calculer(posemetre);
 
-            Assert.AreEqual(16, posemetre.getN());
+            Assert.That(posemetre.getN(), Is.EqualTo(16));
         }
 
         private static Posemetre genererUnPosemetre(double E, double S, double t, double N)

@@ -1,24 +1,23 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 
 namespace PosemetreCore.data
 {
     //http://www.fredparker.com/ultexp1.htm
 
-    [TestClass]
+    [TestFixture]
     public class PosemetreTest
     {
-        [TestMethod]
+        [Test]
         public void initialiserUnPosemetre()
         {
-            double constanteC = 255;
             Posemetre posemetre = new Posemetre();
 
-            Assert.IsNotNull(posemetre);
-            Assert.AreEqual(constanteC, Posemetre.C);
+            Assert.That(posemetre, Is.Not.Null);
+            Assert.That(Posemetre.C, Is.EqualTo(255));
         }
     }
 }
