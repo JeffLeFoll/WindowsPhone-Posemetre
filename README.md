@@ -1,4 +1,4 @@
-# WindowsPhone-Posemetre  [![Build Status](https://travis-ci.org/JeffLeFoll/WindowsPhone-Posemetre.svg?branch=master)]
+# WindowsPhone-Posemetre  ![Build Status](https://travis-ci.org/JeffLeFoll/WindowsPhone-Posemetre.svg?branch=master)
 Application Posemètre pour Windows Phone 8.1 et Windows (universal app)
 
 
