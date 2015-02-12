@@ -5,5 +5,5 @@ install:
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release ./PosemetreCore/PosemetreCore.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./PosemetreCore/PosemetreCore-Tests.csproj
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./PosemetreCore/PosemetreCore-Tests/PosemetreCore-Tests.csproj
   
