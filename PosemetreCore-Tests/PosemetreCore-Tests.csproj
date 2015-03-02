@@ -19,7 +19,7 @@
     <PackageCertificateKeyFile>PosemetreCore-Tests_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxBundle>Never</AppxBundle>
     <AllowCrossPlatformRetargeting>False</AllowCrossPlatformRetargeting>
-    <PackageCertificateThumbprint>1404196F970A7F85631D3B81E7CB99C5B9454320</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>28546F02C4A7C5EE2CE1FE5910DBEBF945979C89</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
