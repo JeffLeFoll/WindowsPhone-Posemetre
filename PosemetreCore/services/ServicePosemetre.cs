@@ -87,19 +87,17 @@ namespace PosemetreCore.services
 
         public void calculer(Posemetre posemetre)
         {
-            if (posemetre.getE() != null) {
-                switch (posemetre.getModeUtilisation())
-                { 
-                    case ModeDuPosemetre.Iso:
-                        this.calculerIso(posemetre);
-                        break;
-                    case ModeDuPosemetre.Ouverture:
-                        this.calculerOuverture(posemetre);
-                        break;
-                    case ModeDuPosemetre.TempsDePose:
-                        this.calculerTempsDePose(posemetre);
-                        break;
-                }
+            switch (posemetre.getModeUtilisation())
+            { 
+                case ModeDuPosemetre.Iso:
+                    this.calculerIso(posemetre);
+                    break;
+                case ModeDuPosemetre.Ouverture:
+                    this.calculerOuverture(posemetre);
+                    break;
+                case ModeDuPosemetre.TempsDePose:
+                    this.calculerTempsDePose(posemetre);
+                    break;
             }
         }
 
