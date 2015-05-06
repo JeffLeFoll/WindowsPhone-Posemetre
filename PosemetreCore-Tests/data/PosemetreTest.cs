@@ -11,8 +11,8 @@ namespace PosemetreCore.data
     [TestFixture]
     public class PosemetreTest
     {
-        [Test]
-        public void initialiserUnPosemetre()
+        [TestCase]
+        public void doitInitialiserUnPosemetre()
         {
             Posemetre posemetre = new Posemetre();
 
