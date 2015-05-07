@@ -8,7 +8,7 @@
     <ProjectGuid>{1A8AF45A-BF47-4149-A8E7-B02FCE77BFE6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PosemetreCore</RootNamespace>
+    <RootNamespace>PosemètreCore</RootNamespace>
     <AssemblyName>PosemetreCore</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
@@ -41,10 +41,12 @@
     <TargetPlatform Include="Windows, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="capteur\CapteurDeLuminosite.cs" />
-    <Compile Include="data\Posemetre.cs" />
+    <Compile Include="capteur\CapteurDeLuminosité.cs" />
+    <Compile Include="data\Posemètre.cs" />
+    <Compile Include="Fonctionnalités\Fonctionnalité.cs" />
+    <Compile Include="Fonctionnalités\FonctionnalitéCalculOuverture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="services\ServicePosemetre.cs" />
+    <Compile Include="services\ServicePosemètre.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
