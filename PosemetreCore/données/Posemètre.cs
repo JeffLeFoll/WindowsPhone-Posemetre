@@ -1,23 +1,14 @@
 ﻿
-namespace PosemètreCore.data
+namespace PosemètreCore.données
 {
-    public enum ModeDuPosemètre
-    {
-        TempsDePose,
-        Iso,
-        Ouverture
-    }
-
     public class Posemètre
     {
         public static readonly double CONSTANTE_ETALONNAGE = 255;
 
         private double éclairementLumineux;
         private double iso;
-        private double tempsDExposition;
+        private double tempsDePose;
         private double ouverture;
-
-        private ModeDuPosemètre modeDUtilisation;
 
         public void setEclairementLumineux(double éclairementLumineux)
         {
@@ -39,14 +30,14 @@ namespace PosemètreCore.data
             return iso;
         }
 
-        public void setTempsDExposition(double tempsDExposition)
+        public void setTempsDePose(double tempsDePose)
         {
-            this.tempsDExposition = tempsDExposition;
+            this.tempsDePose = tempsDePose;
         }
 
-        public double getTempsDExposition()
+        public double getTempsDePose()
         {
-            return tempsDExposition;
+            return tempsDePose;
         }
 
         public void setOuverture(double ouverture)
@@ -57,16 +48,6 @@ namespace PosemètreCore.data
         public double getOuverture()
         {
             return ouverture;
-        }
-
-        public void setModeDUtilisation(ModeDuPosemètre mode)
-        {
-            modeDUtilisation = mode;
-        }
-
-        public ModeDuPosemètre getModeUtilisation()
-        {
-            return modeDUtilisation;
         }
     }
 }

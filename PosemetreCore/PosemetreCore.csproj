@@ -42,10 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="capteur\CapteurDeLuminosité.cs" />
-    <Compile Include="data\Posemètre.cs" />
-    <Compile Include="ModeDeFonctionement\ModeCalculIso.cs" />
-    <Compile Include="ModeDeFonctionement\ModeDeFonctionement.cs" />
-    <Compile Include="ModeDeFonctionement\ModeCalculOuverture.cs" />
+    <Compile Include="données\Posemètre.cs" />
+    <Compile Include="ModesDeFonctionement\ModeCalculIso.cs" />
+    <Compile Include="ModesDeFonctionement\ModeCalculTempsDePose.cs" />
+    <Compile Include="ModesDeFonctionement\ModeDeFonctionement.cs" />
+    <Compile Include="ModesDeFonctionement\ModeCalculOuverture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\ServicePosemètre.cs" />
   </ItemGroup>

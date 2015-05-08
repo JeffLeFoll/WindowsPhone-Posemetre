@@ -1,4 +1,4 @@
-﻿using PosemètreCore.data;
+﻿using PosemètreCore.données;
 using NUnit.Framework;
 
 
@@ -44,9 +44,9 @@ namespace PosemètreCore.services
             ServicePosemètre servicePosemètre = new ServicePosemètre();
             Posemètre posemètre = générerUnPosemètre(82000, 100, 0, 16);
 
-            double exposition = servicePosemètre.calculerTempsDExposition(posemètre);
+            double tempsDePose = servicePosemètre.calculerTempsDePose(posemètre);
 
-            Assert.That(exposition, Is.EqualTo(1.0 / 125.0));
+            Assert.That(tempsDePose, Is.EqualTo(1.0 / 125.0));
         }
 
         [TestCase]
@@ -55,47 +55,10 @@ namespace PosemètreCore.services
             ServicePosemètre servicePosemètre = new ServicePosemètre();
             Posemètre posemètre = générerUnPosemètre(5, 100, 0, 11);
 
-            double exposition = servicePosemètre.calculerTempsDExposition(posemètre);
+            double tempsDePose = servicePosemètre.calculerTempsDePose(posemètre);
 
-            Assert.That(exposition, Is.EqualTo(1));
+            Assert.That(tempsDePose, Is.EqualTo(1));
         }
-
-      /*  [TestCase]
-        public void doitCalculerModeTempsDePose()
-        {
-            servicePosemètre servicePosemètre = new servicePosemètre();
-            posemètre posemètre = genererUnposemètre(82000, 100, 0, 16);
-            posemètre.setModeDUtilisation(ModeDuposemètre.TempsDePose);
-
-            servicePosemètre.calculer(posemètre);
-
-            Assert.That(posemètre.getTempsDExposition(), Is.EqualTo(1.0 / 125.0));
-        }
-
-
-        [TestCase]
-        public void doitCalculerModeIso()
-        {
-            servicePosemètre servicePosemètre = new servicePosemètre();
-            posemètre posemètre = genererUnposemètre(82000, 0, 1.0 / 125.0, 16);
-            posemètre.setModeDUtilisation(ModeDuposemètre.Iso);
-
-            servicePosemètre.calculer(posemètre);
-
-            Assert.That(posemètre.getISO(), Is.EqualTo(100));
-        }
-
-        [TestCase]
-        public void doitCalculerModeOuverture()
-        {
-            servicePosemètre servicePosemètre = new servicePosemètre();
-            posemètre posemètre = genererUnposemètre(82000, 100, 1.0 / 125.0, 0);
-            posemètre.setModeDUtilisation(ModeDuposemètre.Ouverture);
-
-            servicePosemètre.calculer(posemètre);
-
-            Assert.That(posemètre.getOuverture(), Is.EqualTo(16));
-        }*/
 
         private static Posemètre générerUnPosemètre(double E, double S, double t, double N)
         {
@@ -107,7 +70,7 @@ namespace PosemètreCore.services
 
             posemètre.setEclairementLumineux(E);
             posemètre.setISO(S);
-            posemètre.setTempsDExposition(t);
+            posemètre.setTempsDePose(t);
             posemètre.setOuverture(N);
 
             return posemètre;

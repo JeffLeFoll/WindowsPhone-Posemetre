@@ -6,7 +6,6 @@ namespace PosemètreCore.ModesDeFonctionement
     [TestFixture]
     class ModeCalculOuvertureTest
     {
-
         ModeCalculOuverture modeOuverture;
 
         [SetUp]

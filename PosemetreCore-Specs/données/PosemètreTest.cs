@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace PosemètreCore.data
+namespace PosemètreCore.données
 {
     //http://www.fredparker.com/ultexp1.htm
 

@@ -1,4 +1,4 @@
-﻿using PosemètreCore.data;
+﻿using PosemètreCore.données;
 using System;
 
 namespace PosemètreCore.services
@@ -10,7 +10,7 @@ namespace PosemètreCore.services
         {
             double E = posemètre.getEclairementLumineux();
             double S = posemètre.getISO();
-            double t = posemètre.getTempsDExposition();
+            double t = posemètre.getTempsDePose();
 
             double N2 = ((E * S) / Posemètre.CONSTANTE_ETALONNAGE) * t;
 
@@ -23,7 +23,7 @@ namespace PosemètreCore.services
         {
             double E = posèmetre.getEclairementLumineux();
             double N = posèmetre.getOuverture();
-            double t = posèmetre.getTempsDExposition();
+            double t = posèmetre.getTempsDePose();
 
             double N2 = Math.Pow(N, 2);
 
@@ -34,7 +34,7 @@ namespace PosemètreCore.services
             return Math.Round(S);
         }
 
-        public double calculerTempsDExposition(Posemètre posemètre)
+        public double calculerTempsDePose(Posemètre posemètre)
         {
             double E = posemètre.getEclairementLumineux();
             double S = posemètre.getISO();
@@ -54,30 +54,5 @@ namespace PosemètreCore.services
             return t;
         }
 
-
-       /* public void calculer(Posemetre posemetre)
-        {
-            switch (posemetre.getModeUtilisation())
-            {
-                case ModeDuPosemetre.Iso:
-                    this.calculerIso(posemetre);
-                    break;
-                case ModeDuPosemetre.Ouverture:
-                    this.calculerOuverture(posemetre);
-                    break;
-                case ModeDuPosemetre.TempsDePose:
-                    this.calculerTempsDExposition(posemetre);
-                    break;
-            }
-        }*/
-
-    /*  public void mesurer(Posemetre posemetre)
-        {
-            lumiereMesure = lireMesureDuCapteurDeLuminosité();
-
-            posemetre.setE(lumiereMesure);
-
-            calculer(posemetre);
-        }*/
     }
 }

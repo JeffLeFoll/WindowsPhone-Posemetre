@@ -2,7 +2,7 @@
 
 namespace PosemètreCore.capteur
 {
-    class CapteurDeLuminosité
+    public class CapteurDeLuminosité
     {
 
         private LightSensor lightsensor;
@@ -29,7 +29,7 @@ namespace PosemètreCore.capteur
             double valeurRetour = -1;
 
            LightSensorReading valeurLue = lightsensor.GetCurrentReading();
-           valeurRetour = System.Convert.ToDouble(valeurLue.IlluminanceInLux.ToString());
+           valeurRetour = System.Convert.ToDouble(valeurLue.IlluminanceInLux);
 
             return valeurRetour;
         }
