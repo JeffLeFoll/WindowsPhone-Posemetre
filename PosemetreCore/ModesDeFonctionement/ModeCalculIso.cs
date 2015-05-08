@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PosemètreCore.actions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,9 @@ namespace PosemètreCore.ModesDeFonctionement
             return false;
         }
 
+        public TypeAction aPourAction()
+        {
+            return TypeAction.Iso;
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace PosemètreCore.actions
 {
-    interface Action
+    public interface ActionDeCalcul
     {
         TypeAction indiqueLeTypeDeLAction();
 

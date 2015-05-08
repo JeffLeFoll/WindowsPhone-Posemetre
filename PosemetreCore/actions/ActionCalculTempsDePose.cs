@@ -3,7 +3,7 @@ using System;
 
 namespace PosemètreCore.actions
 {
-    public class ActionCalculTempsDePose : Action
+    public class ActionCalculTempsDePose : ActionDeCalcul
     {
         public TypeAction indiqueLeTypeDeLAction()
         {

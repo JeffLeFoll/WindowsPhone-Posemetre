@@ -41,12 +41,14 @@
     <TargetPlatform Include="Windows, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="actions\Action.cs" />
+    <Compile Include="actions\ActionDeCalcul.cs" />
     <Compile Include="actions\ActionCalculIso.cs" />
     <Compile Include="actions\ActionCalculOuverture.cs" />
     <Compile Include="actions\ActionCalculTempsDePose.cs" />
     <Compile Include="actions\TypeAction.cs" />
-    <Compile Include="capteur\CapteurDeLuminosité.cs" />
+    <Compile Include="capteurs\Capteur.cs" />
+    <Compile Include="capteurs\CapteurDeLuminosité.cs" />
+    <Compile Include="commandes\AnnuaireDActions.cs" />
     <Compile Include="données\Posemètre.cs" />
     <Compile Include="ModesDeFonctionement\ModeCalculIso.cs" />
     <Compile Include="ModesDeFonctionement\ModeCalculTempsDePose.cs" />

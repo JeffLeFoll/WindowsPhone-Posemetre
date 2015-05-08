@@ -6,10 +6,17 @@ namespace PosemètreCore.actions
     [TestFixture]
     public class ActionCalculIsoTest
     {
+        ActionCalculIso actionIso;
+
+        [SetUp]
+        public void initialisationDeLAction()
+        {
+            actionIso = new ActionCalculIso();
+        }
+
         [TestCase]
         public void doitRetournerLeTypeActionTempsDePose()
         {
-            ActionCalculIso actionIso = new ActionCalculIso();
 
             TypeAction typeDaction = actionIso.indiqueLeTypeDeLAction();
 
@@ -19,7 +26,6 @@ namespace PosemètreCore.actions
         [TestCase]
         public void doitCalculerIsoSunny16()
         {
-            ActionCalculIso actionIso = new ActionCalculIso();
             Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(82000, 0, 1.0 / 125.0, 16);
 
             double iso = actionIso.calculer(posemètre);

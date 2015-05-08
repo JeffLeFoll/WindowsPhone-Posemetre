@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using PosemètreCore.actions;
 using System;
 
 namespace PosemètreCore.ModesDeFonctionement
@@ -28,6 +29,14 @@ namespace PosemètreCore.ModesDeFonctionement
             bool disponibilité = modeTempsDePose.estDisponible();
 
             Assert.That(disponibilité, Is.True);
+        }
+
+        [Test]
+        public void doitFournirLeTypeActionTempsDePose()
+        {
+            TypeAction action = modeTempsDePose.aPourAction();
+
+            Assert.That(action, Is.EqualTo(TypeAction.TempsDePose));
         }
     }
 }

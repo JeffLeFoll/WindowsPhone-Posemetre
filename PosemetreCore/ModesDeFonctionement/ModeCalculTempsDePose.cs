@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PosemètreCore.actions;
+using System;
 
 namespace PosemètreCore.ModesDeFonctionement
 {
@@ -14,5 +15,9 @@ namespace PosemètreCore.ModesDeFonctionement
             return true;
         }
 
+        public TypeAction aPourAction()
+        {
+            return TypeAction.TempsDePose;
+        }
     }
 }

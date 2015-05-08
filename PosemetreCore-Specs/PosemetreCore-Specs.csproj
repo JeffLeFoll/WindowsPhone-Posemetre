@@ -44,6 +44,7 @@
     <Compile Include="actions\ActionCalculIsoTest.cs" />
     <Compile Include="actions\ActionCalculOuvertureTest.cs" />
     <Compile Include="actions\ActionCalculTempsDePoseTest.cs" />
+    <Compile Include="commandes\AnnuaireDActionsTest.cs" />
     <Compile Include="données\GénérateurDePosemètre.cs" />
     <Compile Include="données\PosemètreTest.cs" />
     <Compile Include="ModesDeFonctionement\ModeCalculIsoTest.cs" />

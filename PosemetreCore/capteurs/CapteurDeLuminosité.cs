@@ -1,8 +1,8 @@
 ﻿using Windows.Devices.Sensors;
 
-namespace PosemètreCore.capteur
+namespace PosemètreCore.capteurs
 {
-    public class CapteurDeLuminosité
+    public class CapteurDeLuminosité : Capteur
     {
 
         private LightSensor lightsensor;
@@ -19,12 +19,12 @@ namespace PosemètreCore.capteur
             }
         }
 
-        public bool aUnCapteurDeLumière()
+        public bool estPrésentSurLeDevice()
         {
             return capteurDeLumièrePresent;
         }
 
-        public double lireMesureDuCapteurDeLuminosité()
+        public double lireMesureDuCapteur()
         {
             double valeurRetour = -1;
 

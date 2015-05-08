@@ -1,13 +1,16 @@
-﻿using System;
+﻿using PosemètreCore.actions;
+using System;
 
 namespace PosemètreCore.ModesDeFonctionement
 {
-    interface ModeDeFonctionement
+    public interface ModeDeFonctionement
     {
 
         String fournirUnLibellé();
 
         bool estDisponible();
+
+        TypeAction aPourAction();
 
     }
 }

@@ -6,10 +6,17 @@ namespace PosemètreCore.actions
     [TestFixture]
     class ActionCalculTempsDePoseTest
     {
+        ActionCalculTempsDePose actionTempsDePose;
+
+        [SetUp]
+        public void initialisationDeLAction()
+        {
+            actionTempsDePose = new ActionCalculTempsDePose();
+        }
+        
         [TestCase]
         public void doitRetournerLeTypeActionTempsDePose()
         {
-            ActionCalculTempsDePose actionTempsDePose = new ActionCalculTempsDePose();
 
             TypeAction typeDaction = actionTempsDePose.indiqueLeTypeDeLAction();
 
@@ -19,7 +26,6 @@ namespace PosemètreCore.actions
         [TestCase]
         public void doitCalculerTempsDePoseSunny16()
         {
-            ActionCalculTempsDePose actionTempsDePose = new ActionCalculTempsDePose();
             Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(82000, 100, 0, 16);
 
             double tempsDePose = actionTempsDePose.calculer(posemètre);
@@ -30,7 +36,6 @@ namespace PosemètreCore.actions
         [TestCase]
         public void doitCalculerTempsDePoseEV1()
         {
-            ActionCalculTempsDePose actionTempsDePose = new ActionCalculTempsDePose();
             Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(5, 100, 0, 11);
 
             double tempsDePose = actionTempsDePose.calculer(posemètre);
