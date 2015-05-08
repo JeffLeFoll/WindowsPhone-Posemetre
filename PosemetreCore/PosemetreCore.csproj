@@ -49,6 +49,7 @@
     <Compile Include="capteurs\Capteur.cs" />
     <Compile Include="capteurs\CapteurDeLuminosité.cs" />
     <Compile Include="commandes\AnnuaireDActions.cs" />
+    <Compile Include="commandes\BusDeCommandes.cs" />
     <Compile Include="données\Posemètre.cs" />
     <Compile Include="ModesDeFonctionement\ModeCalculIso.cs" />
     <Compile Include="ModesDeFonctionement\ModeCalculTempsDePose.cs" />

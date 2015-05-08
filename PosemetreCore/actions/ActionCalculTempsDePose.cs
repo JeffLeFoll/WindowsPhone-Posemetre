@@ -10,7 +10,16 @@ namespace PosemètreCore.actions
             return TypeAction.TempsDePose;
         }
 
-        public double calculer(Posemètre posemètre)
+        public Posemètre mettreAJourLePosemètre(Posemètre posemètre)
+        {
+            double tempsDePose = calculerTempsDePose(posemètre);
+
+            posemètre.setTempsDePose(tempsDePose);
+
+            return posemètre;
+        }
+
+        private double calculerTempsDePose(Posemètre posemètre)
         {
             double E = posemètre.getEclairementLumineux();
             double S = posemètre.getISO();

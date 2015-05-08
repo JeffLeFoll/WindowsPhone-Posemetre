@@ -6,7 +6,7 @@ namespace PosemètreCore.actions
     {
         TypeAction indiqueLeTypeDeLAction();
 
-        double calculer(Posemètre posemètre);
+        Posemètre mettreAJourLePosemètre(Posemètre posemètre);
 
     }
 }

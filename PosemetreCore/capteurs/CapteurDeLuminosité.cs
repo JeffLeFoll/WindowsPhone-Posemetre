@@ -2,7 +2,7 @@
 
 namespace PosemètreCore.capteurs
 {
-    public class CapteurDeLuminosité : Capteur
+    public class CapteurDeLuminosité : PosemètreCore.capteurs.Capteur
     {
 
         private LightSensor lightsensor;

@@ -13,8 +13,8 @@ namespace PosemètreCore.actions
         {
             actionTempsDePose = new ActionCalculTempsDePose();
         }
-        
-        [TestCase]
+
+        [Test]
         public void doitRetournerLeTypeActionTempsDePose()
         {
 
@@ -23,24 +23,24 @@ namespace PosemètreCore.actions
             Assert.That(typeDaction, Is.EqualTo(TypeAction.TempsDePose));
         }
 
-        [TestCase]
+        [Test]
         public void doitCalculerTempsDePoseSunny16()
         {
             Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(82000, 100, 0, 16);
 
-            double tempsDePose = actionTempsDePose.calculer(posemètre);
+            posemètre = actionTempsDePose.mettreAJourLePosemètre(posemètre);
 
-            Assert.That(tempsDePose, Is.EqualTo(1.0 / 125.0));
+            Assert.That(posemètre.getTempsDePose(), Is.EqualTo(1.0 / 125.0));
         }
 
-        [TestCase]
+        [Test]
         public void doitCalculerTempsDePoseEV1()
         {
             Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(5, 100, 0, 11);
 
-            double tempsDePose = actionTempsDePose.calculer(posemètre);
+            posemètre = actionTempsDePose.mettreAJourLePosemètre(posemètre);
 
-            Assert.That(tempsDePose, Is.EqualTo(1));
+            Assert.That(posemètre.getTempsDePose(), Is.EqualTo(1));
         }
     }
 }

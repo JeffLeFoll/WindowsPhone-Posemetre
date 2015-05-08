@@ -14,7 +14,7 @@ namespace PosemètreCore.actions
             actionIso = new ActionCalculIso();
         }
 
-        [TestCase]
+        [Test]
         public void doitRetournerLeTypeActionTempsDePose()
         {
 
@@ -23,14 +23,14 @@ namespace PosemètreCore.actions
             Assert.That(typeDaction, Is.EqualTo(TypeAction.Iso));
         }
 
-        [TestCase]
+        [Test]
         public void doitCalculerIsoSunny16()
         {
             Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(82000, 0, 1.0 / 125.0, 16);
 
-            double iso = actionIso.calculer(posemètre);
+            posemètre = actionIso.mettreAJourLePosemètre(posemètre);
 
-            Assert.That(iso, Is.EqualTo(100));
+            Assert.That(posemètre.getISO(), Is.EqualTo(100));
         }
     }
 }

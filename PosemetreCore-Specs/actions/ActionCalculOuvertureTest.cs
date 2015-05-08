@@ -16,7 +16,7 @@ namespace PosemètreCore.actions
             actionOuverture = new ActionCalculOuverture();
         }
 
-        [TestCase]
+        [Test]
         public void doitRetournerLeTypeActionOuverture()
         {
 
@@ -25,14 +25,14 @@ namespace PosemètreCore.actions
             Assert.That(typeDaction, Is.EqualTo(TypeAction.Ouverture));
         }
 
-        [TestCase]
+        [Test]
         public void doitCalculerOuvertureSunny16()
         {
             Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(82000, 100, 1.0 / 125.0, 0);
 
-            double ouverture = actionOuverture.calculer(posemètre);
+            posemètre = actionOuverture.mettreAJourLePosemètre(posemètre);
 
-            Assert.That(ouverture, Is.EqualTo(16));
+            Assert.That(posemètre.getOuverture(), Is.EqualTo(16));
         }
     }
 }

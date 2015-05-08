@@ -10,7 +10,16 @@ namespace PosemètreCore.actions
             return TypeAction.Ouverture;
         }
 
-        public double calculer(Posemètre posemètre)
+        public Posemètre mettreAJourLePosemètre(Posemètre posemètre)
+        {
+            double ouverture = calculOuverture(posemètre);
+
+            posemètre.setOuverture(ouverture);
+
+            return posemètre;
+        }
+
+        private double calculOuverture(Posemètre posemètre)
         {
             double E = posemètre.getEclairementLumineux();
             double S = posemètre.getISO();

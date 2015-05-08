@@ -7,7 +7,7 @@ namespace PosemètreCore.données
     [TestFixture]
     public class PosemetreTest
     {
-        [TestCase]
+        [Test]
         public void doitInitialiserUnPosemètre()
         {
             Posemètre posemètre = new Posemètre();
