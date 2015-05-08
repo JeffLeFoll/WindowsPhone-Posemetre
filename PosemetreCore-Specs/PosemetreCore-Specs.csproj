@@ -42,7 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\PosemètreTest.cs" />
-    <Compile Include="Fonctionnalités\FonctionnalitéCalculOuvertureTest.cs" />
+    <Compile Include="ModesDeFonctionement\ModeCalculIsoTest.cs" />
+    <Compile Include="ModesDeFonctionement\ModeCalculOuvertureTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\ServicePosemètreTest.cs" />
   </ItemGroup>

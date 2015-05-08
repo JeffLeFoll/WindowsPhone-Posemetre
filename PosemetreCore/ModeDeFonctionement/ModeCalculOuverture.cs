@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace PosemètreCore.Fonctionnalités
+namespace PosemètreCore.ModesDeFonctionement
 {
-    public class FonctionnalitéCalculOuverture : Fonctionnalité
+    public class ModeCalculOuverture : ModeDeFonctionement
     {
         public String fournirUnLibellé() 
         {
             return "Ouverture";
         }
 
-        public Boolean estDisponible()
+        public bool estDisponible()
         {
             return true;
         }

@@ -43,8 +43,9 @@
   <ItemGroup>
     <Compile Include="capteur\CapteurDeLuminosité.cs" />
     <Compile Include="data\Posemètre.cs" />
-    <Compile Include="Fonctionnalités\Fonctionnalité.cs" />
-    <Compile Include="Fonctionnalités\FonctionnalitéCalculOuverture.cs" />
+    <Compile Include="ModeDeFonctionement\ModeCalculIso.cs" />
+    <Compile Include="ModeDeFonctionement\ModeDeFonctionement.cs" />
+    <Compile Include="ModeDeFonctionement\ModeCalculOuverture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\ServicePosemètre.cs" />
   </ItemGroup>
