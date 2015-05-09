@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button x:Name="mesurer" Content="Mesurer" HorizontalAlignment="Left" Height="155" Margin="62,442,0,0" VerticalAlignment="Top" Width="315" Click="mesurer_Click"/>
+        <TextBox x:Name="SaisieOuverture" HorizontalAlignment="Left" Height="55" Margin="255,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="SaisieISO" HorizontalAlignment="Left" Height="57" Margin="255,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" InputScope="Number"/>
+        <TextBox x:Name="AffichageRésultat" HorizontalAlignment="Left" Height="67" Margin="62,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" IsReadOnly="True"/>
 
     </Grid>
 </Page>

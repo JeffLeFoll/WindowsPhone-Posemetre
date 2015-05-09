@@ -53,6 +53,7 @@
     <Compile Include="ModesDeFonctionement\ModeCalculOuvertureTest.cs" />
     <Compile Include="ModesDeFonctionement\ModeCalculTempsDePoseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\FractionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="nunit.core">

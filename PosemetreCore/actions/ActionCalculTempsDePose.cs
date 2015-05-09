@@ -31,12 +31,8 @@ namespace PosemètreCore.actions
 
             double t = Math.Round((N2 / ESparC), 3);
 
-            if (t >= 60)
-            {
-                t = Math.Round(t / 60.0);
-            }
-
             return t;
         }
+
     }
 }

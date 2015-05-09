@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using PosemètreCore.données;
+using PosemetreMobile.relais;
+using PosemètreCore.actions;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -44,5 +47,22 @@ namespace PosemetreMobile
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+
+        private void mesurer_Click(object sender, RoutedEventArgs e)
+        {
+            double valeurIso = System.Convert.ToDouble(this.SaisieISO.Text);
+            double valeurOuverture = System.Convert.ToDouble(this.SaisieOuverture.Text);
+
+            Posemètre posemètre = new Posemètre();
+            posemètre.setISO(valeurIso);
+            posemètre.setOuverture(valeurOuverture);
+
+            RelaiCommandesCalcul relais = new RelaiCommandesCalcul();
+
+            posemètre = relais.executerCommande(TypeAction.TempsDePose, posemètre);
+
+            this.AffichageRésultat.Text = posemètre.getTempsDePose().ToString();
+        }
+
     }
 }
