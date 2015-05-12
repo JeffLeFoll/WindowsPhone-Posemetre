@@ -29,9 +29,9 @@ namespace PosemètreCore.actions
 
             double ESparC = (E * S) / Posemètre.CONSTANTE_ETALONNAGE;
 
-            double t = Math.Round((N2 / ESparC), 3);
+            double t = N2 / ESparC;
 
-            return t;
+            return ArrondiseurTempsDePose.arrondire(t);
         }
 
     }

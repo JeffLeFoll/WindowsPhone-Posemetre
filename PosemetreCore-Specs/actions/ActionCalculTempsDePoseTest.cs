@@ -33,24 +33,34 @@ namespace PosemètreCore.actions
             Assert.That(posemètre.getTempsDePose(), Is.EqualTo(0.008));
         }
 
-        [Test]
-        public void doitCalculerTempsDePoseEV3Iso100F2()
+        [TestCase(22, 60)]
+        [TestCase(5.6, 4)]
+        [TestCase(4, 2)]
+        [TestCase(2.8, 1)]
+        [TestCase(2, 0.5)]
+        [TestCase(1.4, 0.25)]
+        public void doitCalculerTempsDePoseEV3Iso100(double ouverture, double tempsDePoseAttendu)
         {
-            Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(20, 100, 0, 2);
+            Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(20, 100, 0, ouverture);
 
             posemètre = actionTempsDePose.mettreAJourLePosemètre(posemètre);
 
-            Assert.That(posemètre.getTempsDePose(), Is.EqualTo(0.5));
+            Assert.That(posemètre.getTempsDePose(), Is.EqualTo(tempsDePoseAttendu));
         }
 
-        [Test]
-        public void doitCalculerTempsDePoseEV1Iso100F14()
+        [TestCase(22, 0.125)]
+        [TestCase(5.6, 0.008)]
+        [TestCase(4, 0.004)]
+        [TestCase(2.8, 0.002)]
+        [TestCase(2, 0.001)]
+        [TestCase(1.4, 0.0005)]
+        public void doitCalculerTempsDePoseEV12Iso100(double ouverture, double tempsDePoseAttendu)
         {
-            Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(20, 100, 0, 4);
+            Posemètre posemètre = GénérateurDePosemètre.générerUnPosemètre(10000, 100, 0, ouverture);
 
             posemètre = actionTempsDePose.mettreAJourLePosemètre(posemètre);
 
-            Assert.That(posemètre.getTempsDePose(), Is.EqualTo(2));
+            Assert.That(posemètre.getTempsDePose(), Is.EqualTo(tempsDePoseAttendu));
         }
     }
 }
