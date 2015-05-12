@@ -1,11 +1,11 @@
-﻿using System;
+﻿using PosemètreCore.données;
+using System;
 using System.Collections.Generic;
 
-namespace PosemètreCore.données
+namespace PosemètreCore.utils
 {
     public class ArrondiseurTempsDePose
     {
-
         public static double arrondire(double tempsDePose)
         {
             List<double> ensembleDesTempsDePose = TempsDePose.récupérerToutesLesValeuresDeTempsDePose();
