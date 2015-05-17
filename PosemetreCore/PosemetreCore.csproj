@@ -51,7 +51,7 @@
     <Compile Include="capteurs\CapteurDeLuminosité.cs" />
     <Compile Include="commandes\AnnuaireDActions.cs" />
     <Compile Include="commandes\BusDeCommandes.cs" />
-    <Compile Include="utils\ArrondiseurTempsDePose.cs" />
+    <Compile Include="utils\Arrondiseur.cs" />
     <Compile Include="données\Posemètre.cs" />
     <Compile Include="données\TempsDePose.cs" />
     <Compile Include="ModesDeFonctionement\ModeCalculIso.cs" />

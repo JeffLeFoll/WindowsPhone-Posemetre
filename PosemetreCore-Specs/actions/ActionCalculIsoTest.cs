@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using PosemètreCore.données;
+using System;
 
 namespace PosemètreCore.actions
 {
@@ -32,5 +33,6 @@ namespace PosemètreCore.actions
 
             Assert.That(posemètre.getISO(), Is.EqualTo(100));
         }
+
     }
 }

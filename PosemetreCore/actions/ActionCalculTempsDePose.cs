@@ -32,7 +32,7 @@ namespace PosemètreCore.actions
 
             double t = N2 / ESparC;
 
-            return ArrondiseurTempsDePose.arrondire(t);
+            return Arrondiseur.arrondire(t, TempsDePose.récupérerToutesLesValeuresDeTempsDePose());
         }
 
     }

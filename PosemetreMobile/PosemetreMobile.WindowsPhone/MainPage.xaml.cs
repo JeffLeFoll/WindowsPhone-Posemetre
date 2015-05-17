@@ -30,6 +30,14 @@ namespace PosemetreMobile
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            this.initialiserModes();
+        }
+
+        private void initialiserModes()
+        {
+            mode.ItemsSource = Enum.GetValues(typeof(TypeAction)); ;
+
         }
 
         /// <summary>
@@ -50,8 +58,8 @@ namespace PosemetreMobile
 
         private void mesurer_Click(object sender, RoutedEventArgs e)
         {
-            double valeurIso = System.Convert.ToDouble(this.SaisieISO.Text);
-            double valeurOuverture = System.Convert.ToDouble(this.SaisieOuverture.Text);
+            double valeurIso = System.Convert.ToDouble(this.saisieISO.Text);
+            double valeurOuverture = System.Convert.ToDouble(this.saisieOuverture.Text);
 
             Posemètre posemètre = new Posemètre();
             posemètre.setISO(valeurIso);
@@ -61,7 +69,7 @@ namespace PosemetreMobile
 
             posemètre = relais.executerCommande(TypeAction.TempsDePose, posemètre);
 
-            this.AffichageRésultat.Text = posemètre.getTempsDePose().ToString();
+            this.affichageRésultat.Text = posemètre.getTempsDePose().ToString();
         }
 
     }

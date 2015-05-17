@@ -29,7 +29,7 @@ namespace PosemètreCore.actions
 
             double N = Math.Sqrt(N2);
 
-            return Math.Round(N);
+            return Math.Round(N, 1, MidpointRounding.ToEven);
         }
     }
 }
