@@ -1,4 +1,5 @@
 ﻿using PosemètreCore.données;
+using PosemètreCore.utils;
 using System;
 
 namespace PosemètreCore.actions
@@ -29,7 +30,7 @@ namespace PosemètreCore.actions
 
             double N = Math.Sqrt(N2);
 
-            return Math.Round(N, 1, MidpointRounding.ToEven);
+            return Arrondiseur.arrondire(N, Ouverture.récupérerToutesLesValeuresDOuverture());
         }
     }
 }
