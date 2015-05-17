@@ -15,8 +15,8 @@
         <TextBox x:Name="saisieOuverture" HorizontalAlignment="Left" Height="55" Margin="255,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" InputScope="NumberFullWidth"/>
         <TextBox x:Name="saisieISO" HorizontalAlignment="Left" Height="57" Margin="255,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" InputScope="Number"/>
         <TextBox x:Name="affichageRésultat" HorizontalAlignment="Left" Height="67" Margin="62,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" IsReadOnly="True"/>
-        <ComboBox x:Name="mode" HorizontalAlignment="Left" Height="176" Margin="28,0,0,0" VerticalAlignment="Top" Width="188" PlaceholderText="Mode">
-        </ComboBox>
+        <ComboBox x:Name="mode" HorizontalAlignment="Left" Height="176" Margin="28,0,0,0" VerticalAlignment="Top" Width="188" 
+                  PlaceholderText="Mode"/>
 
     </Grid>
 </Page>

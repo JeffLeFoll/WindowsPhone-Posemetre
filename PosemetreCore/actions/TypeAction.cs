@@ -10,7 +10,7 @@ namespace PosemètreCore.actions
         public static TypeAction Iso = new TypeAction("ISO");
         public static TypeAction TempsDePose = new TypeAction("Temps de pose");
 
-        public static readonly List<TypeAction> typesDActionDisponibles = new List<TypeAction> { TypeAction.Ouverture, TypeAction.Iso, TypeAction.TempsDePose };
+        public static readonly List<TypeAction> TypesDActionDisponibles = new List<TypeAction> { TypeAction.Ouverture, TypeAction.Iso, TypeAction.TempsDePose };
 
         private string libellé;
 
@@ -20,6 +20,11 @@ namespace PosemètreCore.actions
         }
 
         public string getLibellé() 
+        {
+            return this.libellé;
+        }
+
+        public override string ToString()
         {
             return this.libellé;
         }

@@ -36,8 +36,7 @@ namespace PosemetreMobile
 
         private void initialiserModes()
         {
-            mode.ItemsSource = Enum.GetValues(typeof(TypeAction)); ;
-
+            mode.ItemsSource = TypeAction.TypesDActionDisponibles;
         }
 
         /// <summary>
@@ -67,7 +66,7 @@ namespace PosemetreMobile
 
             RelaiCommandesCalcul relais = new RelaiCommandesCalcul();
 
-            posemètre = relais.executerCommande(TypeAction.TempsDePose, posemètre);
+            posemètre = relais.executerCommande((TypeAction) mode.SelectedItem, posemètre);
 
             this.affichageRésultat.Text = posemètre.getTempsDePose().ToString();
         }
