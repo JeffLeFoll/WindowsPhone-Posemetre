@@ -5,12 +5,10 @@ namespace PosemètreCore.ModesDeFonctionement
 {
     public interface ModeDeFonctionement
     {
+        string fournirUnLibellé { get; }
 
-        String fournirUnLibellé();
+        bool estDisponible { get; }
 
-        bool estDisponible();
-
-        TypeAction aPourAction();
-
+        TypeAction aPourAction { get; }
     }
 }

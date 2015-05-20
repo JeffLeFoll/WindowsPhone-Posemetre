@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Navigation;
 using PosemètreCore.données;
 using PosemetreMobile.relais;
 using PosemètreCore.actions;
+using PosemètreCore.annuaires;
+using PosemètreCore.ModesDeFonctionement;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -36,7 +38,25 @@ namespace PosemetreMobile
 
         private void initialiserModes()
         {
-            mode.ItemsSource = TypeAction.TypesDActionDisponibles;
+            mode.ItemsSource = AnnuaireDeModesDeFonctionnement.Modes;
+            mode.DisplayMemberPath = "fournirUnLibellé";
+        }
+
+        private void mesurer_Click(object sender, RoutedEventArgs e)
+        {
+            double valeurIso = System.Convert.ToDouble(this.saisieISO.Text);
+            double valeurOuverture = System.Convert.ToDouble(this.saisieOuverture.Text);
+            ModeDeFonctionement modeChoisi = (ModeDeFonctionement)mode.SelectedItem;
+
+            Posemètre posemètre = new Posemètre();
+            posemètre.setISO(valeurIso);
+            posemètre.setOuverture(valeurOuverture);
+
+            RelaiCommandesCalcul relais = new RelaiCommandesCalcul();
+            
+            posemètre = relais.executerCommande(modeChoisi.aPourAction, posemètre);
+
+            this.affichageRésultat.Text = posemètre.getTempsDePose().ToString();
         }
 
         /// <summary>
@@ -54,22 +74,5 @@ namespace PosemetreMobile
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
-
-        private void mesurer_Click(object sender, RoutedEventArgs e)
-        {
-            double valeurIso = System.Convert.ToDouble(this.saisieISO.Text);
-            double valeurOuverture = System.Convert.ToDouble(this.saisieOuverture.Text);
-
-            Posemètre posemètre = new Posemètre();
-            posemètre.setISO(valeurIso);
-            posemètre.setOuverture(valeurOuverture);
-
-            RelaiCommandesCalcul relais = new RelaiCommandesCalcul();
-
-            posemètre = relais.executerCommande((TypeAction) mode.SelectedItem, posemètre);
-
-            this.affichageRésultat.Text = posemètre.getTempsDePose().ToString();
-        }
-
     }
 }

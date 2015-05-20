@@ -18,7 +18,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLeLibelléDuModeOuverture() 
         {
-            String libellé = modeOuverture.fournirUnLibellé();
+            String libellé = modeOuverture.fournirUnLibellé;
 
             Assert.That(libellé, Is.EqualTo("Ouverture"));
         }
@@ -26,7 +26,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLaDisponibilitéDuModeOuverture()
         {
-            bool disponibilité = modeOuverture.estDisponible();
+            bool disponibilité = modeOuverture.estDisponible;
 
             Assert.That(disponibilité, Is.True);
         }
@@ -34,7 +34,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLeTypeActionOuverture()
         {
-            TypeAction action = modeOuverture.aPourAction();
+            TypeAction action = modeOuverture.aPourAction;
 
             Assert.That(action, Is.EqualTo(TypeAction.Ouverture));
         }

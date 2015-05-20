@@ -4,30 +4,12 @@ using System.Collections.Generic;
 
 namespace PosemètreCore.actions
 {
-    public class TypeAction
+    public enum TypeAction
     {
-        public static TypeAction Ouverture = new TypeAction("Ouverture");
-        public static TypeAction Iso = new TypeAction("ISO");
-        public static TypeAction TempsDePose = new TypeAction("Temps de pose");
+        Ouverture,
+        Iso,
+        TempsDePose
 
-        public static readonly List<TypeAction> TypesDActionDisponibles = new List<TypeAction> { TypeAction.Ouverture, TypeAction.Iso, TypeAction.TempsDePose };
-
-        private string libellé;
-
-        private TypeAction(string libellé)
-        {
-            this.libellé = libellé;
-        }
-
-        public string getLibellé() 
-        {
-            return this.libellé;
-        }
-
-        public override string ToString()
-        {
-            return this.libellé;
-        }
     }
 
 }

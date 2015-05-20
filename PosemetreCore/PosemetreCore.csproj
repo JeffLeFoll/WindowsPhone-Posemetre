@@ -47,6 +47,7 @@
     <Compile Include="actions\ActionCalculOuverture.cs" />
     <Compile Include="actions\ActionCalculTempsDePose.cs" />
     <Compile Include="actions\TypeAction.cs" />
+    <Compile Include="annuaires\AnnuaireDeModesDeFonctionnement.cs" />
     <Compile Include="capteurs\Capteur.cs" />
     <Compile Include="capteurs\CapteurDeLuminosité.cs" />
     <Compile Include="commandes\AnnuaireDActions.cs" />

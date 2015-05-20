@@ -5,19 +5,19 @@ namespace PosemètreCore.ModesDeFonctionement
 {
     public class ModeCalculTempsDePose : ModeDeFonctionement
     {
-        public String fournirUnLibellé()
+        public string fournirUnLibellé
         {
-            return "Temps de pose";
+            get { return "Temps de pose"; }
         }
 
-        public bool estDisponible()
+        public bool estDisponible
         {
-            return true;
+            get { return true; }
         }
 
-        public TypeAction aPourAction()
+        public TypeAction aPourAction
         {
-            return TypeAction.TempsDePose;
+            get { return TypeAction.TempsDePose; }
         }
     }
 }

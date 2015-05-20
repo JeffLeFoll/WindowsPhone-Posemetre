@@ -18,7 +18,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLeLibelléDuModeTempsDePose()
         {
-            String libellé = modeTempsDePose.fournirUnLibellé();
+            String libellé = modeTempsDePose.fournirUnLibellé;
 
             Assert.That(libellé, Is.EqualTo("Temps de pose"));
         }
@@ -26,7 +26,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLaDisponibilitéDuModeTempsDePose()
         {
-            bool disponibilité = modeTempsDePose.estDisponible();
+            bool disponibilité = modeTempsDePose.estDisponible;
 
             Assert.That(disponibilité, Is.True);
         }
@@ -34,7 +34,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLeTypeActionTempsDePose()
         {
-            TypeAction action = modeTempsDePose.aPourAction();
+            TypeAction action = modeTempsDePose.aPourAction;
 
             Assert.That(action, Is.EqualTo(TypeAction.TempsDePose));
         }

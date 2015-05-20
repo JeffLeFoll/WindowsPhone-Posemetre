@@ -5,19 +5,19 @@ namespace PosemètreCore.ModesDeFonctionement
 {
     public class ModeCalculIso : ModeDeFonctionement
     {
-        public String fournirUnLibellé()
+        public string fournirUnLibellé
         {
-            return "ISO";
+            get { return "ISO"; }
         }
 
-        public bool estDisponible()
+        public bool estDisponible
         {
-            return false;
+            get { return false; }
         }
 
-        public TypeAction aPourAction()
+        public TypeAction aPourAction
         {
-            return TypeAction.Iso;
+            get { return TypeAction.Iso; }
         }
     }
 }

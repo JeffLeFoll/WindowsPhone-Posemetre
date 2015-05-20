@@ -5,20 +5,19 @@ namespace PosemètreCore.ModesDeFonctionement
 {
     public class ModeCalculOuverture : ModeDeFonctionement
     {
-        public String fournirUnLibellé() 
+        public string fournirUnLibellé
         {
-            return "Ouverture";
+            get { return "Ouverture"; }
         }
 
-        public bool estDisponible()
+        public bool estDisponible
         {
-            return true;
+            get {return true; }
         }
 
-        public TypeAction aPourAction()
+        public TypeAction aPourAction
         {
-            return TypeAction.Ouverture;
+            get { return TypeAction.Ouverture; }
         }
-
     }
 }

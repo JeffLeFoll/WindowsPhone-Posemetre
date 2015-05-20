@@ -18,7 +18,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLeLibelléDuModeISO()
         {
-            String libellé = modeIso.fournirUnLibellé();
+            String libellé = modeIso.fournirUnLibellé;
 
             Assert.That(libellé, Is.EqualTo("ISO"));
         }
@@ -26,7 +26,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLaDisponibilitéDuModeISO()
         {
-            bool disponibilité = modeIso.estDisponible();
+            bool disponibilité = modeIso.estDisponible;
 
             Assert.That(disponibilité, Is.False);
         }
@@ -34,7 +34,7 @@ namespace PosemètreCore.ModesDeFonctionement
         [Test]
         public void doitFournirLeTypeActionIso()
         {
-            TypeAction action = modeIso.aPourAction();
+            TypeAction action = modeIso.aPourAction;
 
             Assert.That(action, Is.EqualTo(TypeAction.Iso));
         }
