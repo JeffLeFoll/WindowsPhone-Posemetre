@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Collection\ClésValeursPourCombobox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)fabriques\FabriqueDeCapteurs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)relais\RelaiCommandeCalcul.cs" />
   </ItemGroup>

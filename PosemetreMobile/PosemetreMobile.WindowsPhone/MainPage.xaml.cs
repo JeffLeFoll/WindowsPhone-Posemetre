@@ -17,6 +17,7 @@ using PosemetreMobile.relais;
 using PosemètreCore.actions;
 using PosemètreCore.annuaires;
 using PosemètreCore.ModesDeFonctionement;
+using PosemetreMobile.Collection;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,9 +32,14 @@ namespace PosemetreMobile
         {
             this.InitializeComponent();
 
+            this.initialiserModes();
+            this.initialiserOuverture();
+            this.initialiserTempsDePose();
+
+            mesurer.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            this.initialiserModes();
         }
 
         private void initialiserModes()
@@ -42,10 +48,26 @@ namespace PosemetreMobile
             mode.DisplayMemberPath = "fournirUnLibellé";
         }
 
+        private void initialiserOuverture()
+        {
+            ouverture.ItemsSource = Ouverture.récupérerToutesLesValeuresDOuverture();
+
+            ouverture.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+        }
+
+        private void initialiserTempsDePose()
+        {
+            tempsDePose.ItemsSource = TempsDePose.récupérerAnnuaire().Select(item => new ClésValeursPourCombobox<double, string> { Key = item.Key, Value = item.Value });
+            tempsDePose.DisplayMemberPath = "Value";
+            tempsDePose.SelectedValuePath = "Key";
+
+            tempsDePose.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+        }
+
         private void mesurer_Click(object sender, RoutedEventArgs e)
         {
             double valeurIso = System.Convert.ToDouble(this.saisieISO.Text);
-            double valeurOuverture = System.Convert.ToDouble(this.saisieOuverture.Text);
+            double valeurOuverture = (double)ouverture.SelectedItem;
             ModeDeFonctionement modeChoisi = (ModeDeFonctionement)mode.SelectedItem;
 
             Posemètre posemètre = new Posemètre();
@@ -53,7 +75,7 @@ namespace PosemetreMobile
             posemètre.setOuverture(valeurOuverture);
 
             RelaiCommandesCalcul relais = new RelaiCommandesCalcul();
-            
+
             posemètre = relais.executerCommande(modeChoisi.aPourAction, posemètre);
 
             this.affichageRésultat.Text = posemètre.getTempsDePose().ToString();
@@ -74,5 +96,6 @@ namespace PosemetreMobile
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+
     }
 }
