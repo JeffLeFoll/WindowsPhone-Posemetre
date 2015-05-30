@@ -16,7 +16,7 @@ environment:
   COVERALLS_REPO_TOKEN:
     secure: /tRhFlxb1FuCndTTmE9TLmPhWL71TtQZOOnRPs8ut6cSVcK+p1GAN1ztJhIBIU6X
 before_build:
-  - nuget restore ".\src\MobilePosemetre.sln"	
+  - nuget restore ".\MobilePosemetre.sln"	
 build:
   project: MobilePosemetre.sln
   verbosity: minimal
