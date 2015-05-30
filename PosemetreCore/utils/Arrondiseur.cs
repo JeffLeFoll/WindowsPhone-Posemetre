@@ -9,14 +9,14 @@ namespace PosemètreCore.utils
         public static double arrondire(double tempsDePose, List<double> valeursARapprocher)
         {
             Double valeureCourante = valeursARapprocher[0];
-            Double difference = Math.Abs(valeureCourante - tempsDePose);
+            Double différenceValeurCourante = Math.Abs(valeureCourante - tempsDePose);
             
             for (int i = 1; i < valeursARapprocher.Count; i++)
             {
-                Double diff = Math.Abs(valeursARapprocher[i] - tempsDePose);
-                if (diff < difference)
+                Double différenceValeurARapprocher = Math.Abs(valeursARapprocher[i] - tempsDePose);
+                if (différenceValeurARapprocher < différenceValeurCourante)
                 {
-                    difference = diff;
+                    différenceValeurCourante = différenceValeurARapprocher;
                     valeureCourante = valeursARapprocher[i];
                 }
             }

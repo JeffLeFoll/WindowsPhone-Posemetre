@@ -1,7 +1,7 @@
 ﻿using PosemètreCore.actions;
 using System.Collections.Generic;
 
-namespace PosemètreCore.commandes
+namespace PosemètreCore.annuaires
 {
     public class AnnuaireDActions
     {

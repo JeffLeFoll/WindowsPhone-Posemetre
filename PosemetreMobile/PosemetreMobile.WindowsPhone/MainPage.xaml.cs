@@ -35,6 +35,7 @@ namespace PosemetreMobile
             this.initialiserModes();
             this.initialiserOuverture();
             this.initialiserTempsDePose();
+            this.initialiserIso();
 
             mesurer.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
 
@@ -48,16 +49,23 @@ namespace PosemetreMobile
             mode.DisplayMemberPath = "fournirUnLibellé";
         }
 
+        private void initialiserIso()
+        {
+            iso.ItemsSource = Ouverture.récupérerLesValeuresDOuverture();
+
+            iso.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+        }
+
         private void initialiserOuverture()
         {
-            ouverture.ItemsSource = Ouverture.récupérerToutesLesValeuresDOuverture();
+            ouverture.ItemsSource = Ouverture.récupérerLesValeuresDOuverture();
 
             ouverture.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
         }
 
         private void initialiserTempsDePose()
         {
-            tempsDePose.ItemsSource = TempsDePose.récupérerAnnuaire().Select(item => new ClésValeursPourCombobox<double, string> { Key = item.Key, Value = item.Value });
+            tempsDePose.ItemsSource = TempsDePose.récupérerTempsDePose().Select(item => new ClésValeursPourCombobox<double, string> { Key = item.Key, Value = item.Value });
             tempsDePose.DisplayMemberPath = "Value";
             tempsDePose.SelectedValuePath = "Key";
 
@@ -66,12 +74,12 @@ namespace PosemetreMobile
 
         private void mesurer_Click(object sender, RoutedEventArgs e)
         {
-            double valeurIso = System.Convert.ToDouble(this.saisieISO.Text);
+            //double valeurIso = System.Convert.ToDouble(this.saisieISO.Text);
             double valeurOuverture = (double)ouverture.SelectedItem;
             ModeDeFonctionement modeChoisi = (ModeDeFonctionement)mode.SelectedItem;
 
             Posemètre posemètre = new Posemètre();
-            posemètre.setISO(valeurIso);
+            //posemètre.setISO(valeurIso);
             posemètre.setOuverture(valeurOuverture);
 
             RelaiCommandesCalcul relais = new RelaiCommandesCalcul();

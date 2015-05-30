@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PosemetreMobile.Windows", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PosemetreMobile.WindowsPhone", "PosemetreMobile\PosemetreMobile.WindowsPhone\PosemetreMobile.WindowsPhone.csproj", "{C825BFAB-066F-490F-82DB-334B43458E56}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FC564632-14F8-4BA1-9FF2-6B38F42D38BB}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		PosemetreMobile\PosemetreMobile.Shared\PosemetreMobile.Shared.projitems*{4cac18bd-60e9-4bdf-9348-850ad0db16c4}*SharedItemsImports = 4

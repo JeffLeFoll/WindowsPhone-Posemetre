@@ -1,4 +1,5 @@
 ﻿using PosemètreCore.actions;
+using PosemètreCore.annuaires;
 using PosemètreCore.capteurs;
 using PosemètreCore.données;
 using System;

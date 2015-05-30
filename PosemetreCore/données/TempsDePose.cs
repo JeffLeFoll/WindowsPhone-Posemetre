@@ -10,7 +10,7 @@ namespace PosemètreCore.données
         {
             string fraction = "";
 
-            AnnuaireDesTempsDePose.TryGetValue(tempsDePose, out fraction);
+            ensembleDesTempsDePose.TryGetValue(tempsDePose, out fraction);
 
             return fraction;
 
@@ -18,24 +18,24 @@ namespace PosemètreCore.données
 
         public static List<string> récupérerToutesLesFractionsDeTempsDePose()
         {
-            List<string> fractions = AnnuaireDesTempsDePose.Values.ToList();
+            List<string> fractions = ensembleDesTempsDePose.Values.ToList();
 
             return fractions;
         }
 
         public static List<double> récupérerToutesLesValeuresDeTempsDePose()
         {
-            List<double> valeurs = AnnuaireDesTempsDePose.Keys.ToList();
+            List<double> valeurs = ensembleDesTempsDePose.Keys.ToList();
 
             return valeurs;
         }
 
-        public static Dictionary<double, string> récupérerAnnuaire()
+        public static Dictionary<double, string> récupérerTempsDePose()
         {
-            return AnnuaireDesTempsDePose;
+            return ensembleDesTempsDePose;
         }
 
-        private static readonly Dictionary<double, string> AnnuaireDesTempsDePose = new Dictionary<double, string>() 
+        private static readonly Dictionary<double, string> ensembleDesTempsDePose = new Dictionary<double, string>() 
          { 
              {0.00025, "1/4000"},
              {0.0003125,"1/3200"}, 

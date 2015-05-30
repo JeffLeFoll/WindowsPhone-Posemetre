@@ -30,7 +30,7 @@ namespace PosemètreCore.actions
 
             double N = Math.Sqrt(N2);
 
-            return Arrondiseur.arrondire(N, Ouverture.récupérerToutesLesValeuresDOuverture());
+            return Arrondiseur.arrondire(N, Ouverture.récupérerLesValeuresDOuverture());
         }
     }
 }

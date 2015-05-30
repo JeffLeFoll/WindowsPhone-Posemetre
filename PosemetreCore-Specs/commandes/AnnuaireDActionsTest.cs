@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using PosemètreCore.actions;
+using PosemètreCore.annuaires;
 
 namespace PosemètreCore.commandes
 {

@@ -12,13 +12,13 @@
     <Grid>
 
         <Button x:Name="mesurer" Content="Mesurer" HorizontalAlignment="Left" Height="155" Margin="62,374,0,0" VerticalAlignment="Top" Width="315" Click="mesurer_Click"/>
-        <TextBox x:Name="saisieISO" HorizontalAlignment="Left" Height="57" Margin="255,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" InputScope="Number" PlaceholderText="ISO"/>
-        <TextBox x:Name="affichageRésultat" HorizontalAlignment="Left" Height="67" Margin="62,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" IsReadOnly="True"/>
+        <TextBox x:Name="affichageRésultat" HorizontalAlignment="Left" Height="67" Margin="62,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" IsReadOnly="True" PlaceholderText="Résultat"/>
 
         <ComboBox x:Name="mode" HorizontalAlignment="Left" Height="176" Margin="28,0,0,0" VerticalAlignment="Top" Width="188" PlaceholderText="Mode" />
         <ComboBox x:Name="ouverture" HorizontalAlignment="Left" Height="106" Margin="245,0,0,0" VerticalAlignment="Top" Width="132" PlaceholderText="Ouverture" />
-        <ComboBox x:Name="tempsDePose" HorizontalAlignment="Left" Height="106" Margin="245,0,0,0" VerticalAlignment="Top" Width="132" PlaceholderText="Temps de pose" >
-        </ComboBox>
- 
+        <ComboBox x:Name="tempsDePose" HorizontalAlignment="Left" Height="106" Margin="245,0,0,0" VerticalAlignment="Top" Width="132" PlaceholderText="Temps de pose" />
+        <ComboBox x:Name="iso" HorizontalAlignment="Left" Height="106" Margin="245,107,0,0" VerticalAlignment="Top" Width="132" PlaceholderText="ISO" />
+
+
     </Grid>
 </Page>

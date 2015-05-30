@@ -50,7 +50,7 @@
     <Compile Include="annuaires\AnnuaireDeModesDeFonctionnement.cs" />
     <Compile Include="capteurs\Capteur.cs" />
     <Compile Include="capteurs\CapteurDeLuminosité.cs" />
-    <Compile Include="commandes\AnnuaireDActions.cs" />
+    <Compile Include="annuaires\AnnuaireDActions.cs" />
     <Compile Include="commandes\BusDeCommandes.cs" />
     <Compile Include="données\Ouverture.cs" />
     <Compile Include="utils\Arrondiseur.cs" />
