@@ -11,7 +11,7 @@ branches:
   only:
   - master
 os: Visual Studio 2015 RC
-platform: Any CPU
+platform: x86
 environment:
   COVERALLS_REPO_TOKEN:
     secure: /tRhFlxb1FuCndTTmE9TLmPhWL71TtQZOOnRPs8ut6cSVcK+p1GAN1ztJhIBIU6X
