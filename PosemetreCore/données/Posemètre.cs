@@ -1,4 +1,4 @@
-﻿
+
 namespace PosemètreCore.données
 {
     public class Posemètre

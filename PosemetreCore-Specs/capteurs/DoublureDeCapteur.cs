@@ -1,4 +1,4 @@
-﻿
+
 namespace PosemètreCore.capteurs
 {
     public class DoublureDeCapteur : Capteur

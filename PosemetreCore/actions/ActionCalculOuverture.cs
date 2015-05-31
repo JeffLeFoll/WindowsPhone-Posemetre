@@ -1,4 +1,4 @@
-﻿using PosemètreCore.données;
+using PosemètreCore.données;
 using PosemètreCore.utils;
 using System;
 

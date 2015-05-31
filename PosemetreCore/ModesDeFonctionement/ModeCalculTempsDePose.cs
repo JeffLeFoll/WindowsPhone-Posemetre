@@ -1,4 +1,4 @@
-﻿using PosemètreCore.actions;
+using PosemètreCore.actions;
 using System;
 
 namespace PosemètreCore.ModesDeFonctionement

@@ -1,4 +1,4 @@
-﻿using Windows.Devices.Sensors;
+using Windows.Devices.Sensors;
 
 namespace PosemètreCore.capteurs
 {

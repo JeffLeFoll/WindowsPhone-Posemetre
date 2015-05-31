@@ -1,4 +1,4 @@
-﻿using PosemètreCore.ModesDeFonctionement;
+using PosemètreCore.ModesDeFonctionement;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,4 @@
-﻿using PosemètreCore.utils;
+using PosemètreCore.utils;
 using PosemètreCore.données;
 using System.Collections.Generic;
 

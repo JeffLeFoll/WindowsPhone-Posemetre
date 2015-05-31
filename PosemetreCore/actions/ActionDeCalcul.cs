@@ -1,4 +1,4 @@
-﻿using PosemètreCore.données;
+using PosemètreCore.données;
 
 namespace PosemètreCore.actions
 {
